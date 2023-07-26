@@ -39,11 +39,11 @@ describe('Story3', () => {
   });
   it('UAT3.3: Player 1 should have possibility to place "x" on the empty square', () => {
     game.playerMove(game.player1);
-    expect(game.playingBoard[0]).toBe('x');
+    expect(game.playingBoard).toContain('x');
   });
   it('UAT3.4: Player 2 should have possibility to place "o" on the empty square', () => {
     game.playerMove(game.player2);
-    expect(game.playingBoard[1]).toBe('o');
+    expect(game.playingBoard).toContain('o');
   });
   it('UAT3.5: Player 1 should have possibility to randomly place "x" on the empty square', () => {
     game.playerMove(game.player1);

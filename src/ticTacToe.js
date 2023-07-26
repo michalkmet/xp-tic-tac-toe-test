@@ -37,15 +37,20 @@ class Player {
   }
   makeMove(playingBoard) {
     console.log('Player makeMove!');
-    console.log('playingBoard: ', playingBoard);
-    console.log('this.name: ', this.name);
+    let randomSquareNumber = Math.floor(Math.random() * (9 - 0));
+    console.log('randomSquareNumber: ', randomSquareNumber);
     if (this.name === 'Player1') {
-      playingBoard[0] = 'x';
+      playingBoard[randomSquareNumber] = 'x';
     } else {
-      playingBoard[1] = 'o';
+      playingBoard[randomSquareNumber] = 'o';
     }
     return playingBoard;
   }
+
+  // checkTheEmptySquares(playingBoard) {
+  //   let emptySquares = [];
+  //   return emptySquares;
+  // }
 }
 
 module.exports = { Game, Player };
