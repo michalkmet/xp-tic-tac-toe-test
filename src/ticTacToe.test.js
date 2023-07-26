@@ -34,4 +34,7 @@ describe('Story3', () => {
   it('UAT3.2: It should have player 2', () => {
     expect(game.player2).toBe('Player2');
   });
+  it('UAT3.3: Player 1 should have possibility to place "x" on the empty square', () => {
+    expect(game.player1.makeMove()).toBe('Player1 make move');
+  });
 });
