@@ -15,3 +15,10 @@ describe('Story1', () => {
     expect(game.getTieMessage()).toBe("It's a Tie");
   });
 });
+
+describe('Story2', () => {
+  let game = new Game();
+  it('UAT2.1: It should have 9 empty squares when game starts', () => {
+    expect(game.preparePlayingBoard()).toBe('Board prepared');
+  });
+});

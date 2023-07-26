@@ -11,6 +11,10 @@ class Game {
   getTieMessage() {
     return "It's a Tie";
   }
+
+  preparePlayingBoard() {
+    return 'Board prepared';
+  }
 }
 
 module.exports = Game;

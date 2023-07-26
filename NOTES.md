@@ -32,3 +32,6 @@ POMODORO 2:
 - ✅ UAT1.2: It should show information that game ended
 - ✅ UAT1.3: It should show information who won the game
 - ✅ UAT1.4: It should show information if the ends with the tie
+- 🚧 UAT2.1: It should have 9 empty squares when game starts
+- ⚠ TODO UAT2.2: It should be possible to fill the empty square
+- ⚠ TODO UAT2.3: When ther is no empty square, game is over
