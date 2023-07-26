@@ -13,6 +13,7 @@ class Game {
   }
 
   preparePlayingBoard() {
+    this.playingBoard = ['', '', '', '', '', '', '', '', ''];
     return 'Board is ready';
   }
 }

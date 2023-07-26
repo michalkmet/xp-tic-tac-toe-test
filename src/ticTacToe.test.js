@@ -21,4 +21,7 @@ describe('Story2', () => {
   it('UAT2.2: It should show meesage when board for game is ready', () => {
     expect(game.preparePlayingBoard()).toBe('Board is ready');
   });
+  it('UAT2.1: It should have 9 empty squares when game starts', () => {
+    expect(game.playingBoard.length).toBe(9);
+  });
 });
