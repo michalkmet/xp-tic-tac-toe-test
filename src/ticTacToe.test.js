@@ -18,7 +18,7 @@ describe('Story1', () => {
 
 describe('Story2', () => {
   let game = new Game();
-  it('UAT2.1: It should have 9 empty squares when game starts', () => {
-    expect(game.preparePlayingBoard()).toBe('Board prepared');
+  it('UAT2.2: It should show meesage when board for game is ready', () => {
+    expect(game.preparePlayingBoard()).toBe('Board is ready');
   });
 });

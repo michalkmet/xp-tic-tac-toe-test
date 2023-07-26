@@ -13,7 +13,7 @@ class Game {
   }
 
   preparePlayingBoard() {
-    return 'Board prepared';
+    return 'Board is ready';
   }
 }
 
