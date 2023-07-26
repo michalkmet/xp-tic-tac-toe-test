@@ -41,7 +41,7 @@ STORY 3: Game needs 2 players, one will place 'x' and second 'o' at the empty sq
 - ⚠ TODO UAT3.4: Player 2 should have possibility to place 'o' on the empty square
 - ⚠ TODO UAT3.5: Player 1 should have possibility to randomly place 'x' on the empty square
 - ⚠ TODO UAT3.6: Player 2 should have possibility to randomly place 'o' on the empty square
-- ⚠ TODO UAT3.7: Player 1 should see the filled squares
+- ⚠ TODO UAT3.7: Player 1 should see the filled squares and not place "x" on the filled sqaure
 - ⚠ TODO UAT3.8: Player 2 should see the filled squares
 
 STORY 4: We need to check if someone wins the game

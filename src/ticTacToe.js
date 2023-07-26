@@ -24,10 +24,7 @@ class Game {
   }
 
   playerMove(player) {
-    console.log('playerMove!');
-    console.log('player: ', player);
     player.makeMove(this.playingBoard);
-    console.log('this.playingBoard: ', this.playingBoard);
   }
 }
 
@@ -37,8 +34,7 @@ class Player {
   }
   makeMove(playingBoard) {
     console.log('Player makeMove!');
-    let randomSquareNumber = Math.floor(Math.random() * (9 - 0));
-    console.log('randomSquareNumber: ', randomSquareNumber);
+    let randomSquareNumber = this.doRandomPick(playingBoard);
     if (this.name === 'Player1') {
       playingBoard[randomSquareNumber] = 'x';
     } else {
@@ -47,10 +43,12 @@ class Player {
     return playingBoard;
   }
 
-  // checkTheEmptySquares(playingBoard) {
-  //   let emptySquares = [];
-  //   return emptySquares;
-  // }
+  doRandomPick(playingBoard) {
+    let randomNumer = Math.floor(Math.random() * (9 - 0));
+    console.log('randomNumber: ', randomNumer);
+    console.log('playingBoard: ', playingBoard);
+    return playingBoard[randomNumer] != '' ? this.doRandomPick(playingBoard) : randomNumer;
+  }
 }
 
 module.exports = { Game, Player };
