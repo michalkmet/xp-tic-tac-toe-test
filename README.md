@@ -38,7 +38,7 @@ STORY 3: Game needs 2 players, one will place 'x' and second 'o' at the empty sq
 - ⚠ TODO UAT3.1: It should have player 1
 - ⚠ TODO UAT3.2: It should have player 2
 - ⚠ TODO UAT3.3: Player 1 should have possibility to place 'x' on the empty square
-- ⚠ TODO UAT3.4: Player 2 should have possibility to place 'y' on the empty square
+- ⚠ TODO UAT3.4: Player 2 should have possibility to place 'o' on the empty square
 
 STORY 4: We need to check if someone wins the game
 - ⚠ TODO UAT4.1: It should return 'player1 wins' when there are three connected xxx in one row

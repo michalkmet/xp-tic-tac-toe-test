@@ -38,4 +38,8 @@ describe('Story3', () => {
     game.playerMove(game.player1);
     expect(game.playingBoard[0]).toBe('x');
   });
+  it('UAT3.4: Player 2 should have possibility to place "o" on the empty square', () => {
+    game.playerMove(game.player2);
+    expect(game.playingBoard[1]).toBe('o');
+  });
 });

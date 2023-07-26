@@ -38,7 +38,12 @@ class Player {
   makeMove(playingBoard) {
     console.log('Player makeMove!');
     console.log('playingBoard: ', playingBoard);
-    playingBoard[0] = 'x';
+    console.log('this.name: ', this.name);
+    if (this.name === 'Player1') {
+      playingBoard[0] = 'x';
+    } else {
+      playingBoard[1] = 'o';
+    }
     return playingBoard;
   }
 }
