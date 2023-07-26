@@ -9,6 +9,9 @@ describe('Story1', () => {
     expect(game.getEndMessage()).toBe('Game end!');
   });
   it('UAT1.3: It should show information who won the game', () => {
-    expect(game.getWinner()).toBe('Winner is player 1');
+    expect(game.getWinnerMessage()).toBe('Winner is player 1');
+  });
+  it('UAT1.4: It should show information if the ends with the tie', () => {
+    expect(game.getTieMessage()).toBe("It's a Tie");
   });
 });

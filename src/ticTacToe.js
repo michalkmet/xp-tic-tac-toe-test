@@ -5,8 +5,11 @@ class Game {
   getEndMessage() {
     return 'Game end!';
   }
-  getWinner() {
+  getWinnerMessage() {
     return 'Winner is player 1';
+  }
+  getTieMessage() {
+    return "It's a Tie";
   }
 }
 
