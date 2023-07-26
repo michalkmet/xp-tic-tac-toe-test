@@ -36,6 +36,6 @@ POMODORO 2:
 - ✅ UAT2.2: It should show meesage when board for game is ready
 
 - ✅ UAT3.1: It should have player 1
-- ⚠ TODO UAT3.2: It should have player 2
+- ✅ UAT3.2: It should have player 2
 - ⚠ TODO UAT3.3: Player 1 should have possibility to place 'x' on the empty square
 - ⚠ TODO UAT3.4: Player 2 should have possibility to place 'y' on the empty square
