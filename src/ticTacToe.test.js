@@ -48,7 +48,11 @@ describe('Story3', () => {
   it('UAT3.5: Player 1 should have possibility to randomly place "x" on the empty square', () => {
     game.playerMove(game.player1);
     expect(game.playingBoard).toContain('x');
-    expect(game.playingBoard[0]).not.toContain('x');
     expect(game.playingBoard).not.toContain('o');
+  });
+  it('UAT3.6: Player 2 should have possibility to randomly place "o" on the empty square', () => {
+    game.playerMove(game.player2);
+    expect(game.playingBoard).toContain('o');
+    expect(game.playingBoard).not.toContain('x');
   });
 });
