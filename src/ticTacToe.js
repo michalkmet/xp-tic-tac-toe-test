@@ -1,6 +1,9 @@
 class Game {
   getStartMessage() {
-    'Game started!';
+    return 'Game started!';
+  }
+  getEndMessage() {
+    return 'Game end!';
   }
 }
 
