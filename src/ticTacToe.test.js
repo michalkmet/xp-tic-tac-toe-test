@@ -27,7 +27,10 @@ describe('Story2', () => {
 });
 
 describe('Story3', () => {
-  let game = new Game();
+  let game;
+  beforeEach(() => {
+    game = new Game();
+  });
   it('UAT3.1: It should have player 1', () => {
     expect(game.player1.name).toBe('Player1');
   });
@@ -41,5 +44,11 @@ describe('Story3', () => {
   it('UAT3.4: Player 2 should have possibility to place "o" on the empty square', () => {
     game.playerMove(game.player2);
     expect(game.playingBoard[1]).toBe('o');
+  });
+  it('UAT3.5: Player 1 should have possibility to randomly place "x" on the empty square', () => {
+    game.playerMove(game.player1);
+    expect(game.playingBoard).toContain('x');
+    expect(game.playingBoard[0]).not.toContain('x');
+    expect(game.playingBoard).not.toContain('o');
   });
 });
