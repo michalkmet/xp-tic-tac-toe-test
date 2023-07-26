@@ -1,4 +1,4 @@
-const Game = require('./ticTacToe');
+const { Game } = require('./ticTacToe');
 
 describe('Story1', () => {
   let game = new Game();
@@ -29,12 +29,13 @@ describe('Story2', () => {
 describe('Story3', () => {
   let game = new Game();
   it('UAT3.1: It should have player 1', () => {
-    expect(game.player1).toBe('Player1');
+    expect(game.player1.name).toBe('Player1');
   });
   it('UAT3.2: It should have player 2', () => {
-    expect(game.player2).toBe('Player2');
+    expect(game.player2.name).toBe('Player2');
   });
   it('UAT3.3: Player 1 should have possibility to place "x" on the empty square', () => {
-    expect(game.player1.makeMove()).toBe('Player1 make move');
+    game.playerMove(game.player1);
+    expect(game.playingBoard[0]).toBe('x');
   });
 });

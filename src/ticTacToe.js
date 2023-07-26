@@ -1,6 +1,10 @@
 class Game {
-  player1 = 'Player1';
-  player2 = 'Player2';
+  constructor() {
+    this.player1 = new Player('Player1');
+    this.player2 = new Player('Player2');
+    this.preparePlayingBoard();
+  }
+
   getStartMessage() {
     return 'Game started!';
   }
@@ -18,6 +22,25 @@ class Game {
     this.playingBoard = ['', '', '', '', '', '', '', '', ''];
     return 'Board is ready';
   }
+
+  playerMove(player) {
+    console.log('playerMove!');
+    console.log('player: ', player);
+    player.makeMove(this.playingBoard);
+    console.log('this.playingBoard: ', this.playingBoard);
+  }
 }
 
-module.exports = Game;
+class Player {
+  constructor(name) {
+    this.name = name;
+  }
+  makeMove(playingBoard) {
+    console.log('Player makeMove!');
+    console.log('playingBoard: ', playingBoard);
+    playingBoard[0] = 'x';
+    return playingBoard;
+  }
+}
+
+module.exports = { Game, Player };
