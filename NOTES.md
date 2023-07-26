@@ -42,4 +42,4 @@ POMODORO 2:
 POMODORO 2:
 - ✅ UAT3.3: Player 1 should have possibility to place 'x' on the empty square
 - objects refactor - new Player class
-- 🚧 UAT3.4: Player 2 should have possibility to place 'o' on the empty square
+- ✅ UAT3.4: Player 2 should have possibility to place 'o' on the empty square
