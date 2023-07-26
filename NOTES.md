@@ -30,5 +30,5 @@ POMODORO 1:
 POMODORO 2:
 - ✅ UAT1.1: It should show information that game started
 - ✅ UAT1.2: It should show information that game ended
-- ⚠ TODO UAT1.3: It should show information who won the game
+- ✅ UAT1.3: It should show information who won the game
 - ⚠ TODO UAT1.4: It should show information if the ends with the tie
