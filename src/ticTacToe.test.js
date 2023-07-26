@@ -25,3 +25,10 @@ describe('Story2', () => {
     expect(game.playingBoard.length).toBe(9);
   });
 });
+
+describe('Story3', () => {
+  let game = new Game();
+  it('UAT3.1: It should have player 1', () => {
+    expect(game.player1).toBe('Player1');
+  });
+});

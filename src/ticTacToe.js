@@ -1,4 +1,5 @@
 class Game {
+  player1 = 'Player1';
   getStartMessage() {
     return 'Game started!';
   }
