@@ -33,8 +33,6 @@ STORY 1: Every information related to the game should be displayed in the consol
 STORY 2: Game needs 9 squares where players can put their x and o
 - ⚠ TODO UAT2.1: It should have 9 empty squares when game starts
 - ⚠ TODO UAT2.2: It should show meesage when board for game is ready
-- ⚠ TODO UAT2.3: It should be possible to fill the empty square
-- ⚠ TODO UAT2.4: When ther is no empty square, game is over
 
 STORY 3: Game needs 2 players, one will place 'x' and second 'o' at the empty squares 
 - ⚠ TODO UAT3.1: It should have player 1
