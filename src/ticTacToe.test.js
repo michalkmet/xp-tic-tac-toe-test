@@ -1,7 +1,7 @@
-const ticTacToe = require('./ticTacToe');
+const Game = require('./ticTacToe');
 
-describe('ticTacToe', () => {
-  it('should return hello', () => {
-    expect(ticTacToe()).toBe('hello');
+describe('Story1', () => {
+  it('UAT1.1: It should show information that game started', () => {
+    expect(Game.getStartMessage()).toBe('Game started!');
   });
 });

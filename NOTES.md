@@ -25,3 +25,7 @@ Players take turns putting their marks in empty squares. The first player to get
 POMODORO 1:
 - ✅ Initial setup & refactor
 - ✅ User stories
+- 🚧 UAT1.1: It should show information that game started
+- ⚠ TODO UAT1.2: It should show information that game ended
+- ⚠ TODO UAT1.3: It should show information who won the game
+- ⚠ TODO UAT1.4: It should show information if the ends with the tie

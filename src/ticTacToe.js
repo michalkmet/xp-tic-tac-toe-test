@@ -1,5 +1,7 @@
-function ticTacToe() {
-  return 'hello';
+class Game {
+  getStartMessage() {
+    'Game started!';
+  }
 }
 
-module.exports = ticTacToe;
+module.exports = Game;
