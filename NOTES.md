@@ -24,4 +24,4 @@ Players take turns putting their marks in empty squares. The first player to get
 
 POMODORO 1:
 - ✅ Initial setup & refactor
-- 🚧 User stories
+- ✅ User stories
