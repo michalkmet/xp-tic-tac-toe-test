@@ -59,7 +59,3 @@ POMODORO 4:
 
 POMODORO 5:
 - ✅ UAT4.1: It should return 'player1 wins' when there are three connected xxx in one row
-- ⚠ TODO UAT4.2: It should return 'player2 wins' when there are three connected ooo in one column
-- ⚠ TODO UAT4.3: It should return 'player1 wins' when there are three connected xxx diagonally from left top to right bottom
-- ⚠ TODO UAT4.4: It should return 'player2 wins' when there are three connected ooo diagonally from right top to left bottom
-- ⚠ TODO UAT4.5: It should return 'It's a tie' when there are no three connected xxx or ooo and no empty square reaining
