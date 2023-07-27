@@ -50,3 +50,9 @@ STORY 4: We need to check if someone wins the game
 - ⚠ TODO UAT4.3: It should return 'player1 wins' when there are three connected xxx diagonally from left top to right bottom
 - ⚠ TODO UAT4.4: It should return 'player2 wins' when there are three connected ooo diagonally from right top to left bottom
 - ⚠ TODO UAT4.5: It should return 'It's a tie' when there are no three connected xxx or ooo and no empty square reaining
+
+STORY 5: Preparation for winner checks
+- ⚠ TODO UAT5.1: It should return fill result with the message 'Game end!' when game is over
+- ⚠ TODO UAT5.2: It should return message with the winner name when game is over and we have winner
+- ⚠ TODO UAT5.3: It should return tie message when game is over and we don't have winner
+- ⚠ TODO UAT5.4: It should check if we have winner after every round - return true/false

@@ -74,4 +74,7 @@ describe('Story4', () => {
   it('UAT4.1: It should return "player1 wins" when there are three connected xxx in one row', () => {
     expect(game.result).toBe(game.getEndMessage());
   });
+  it('UAT4.2: It should return "player2 wins" when there are three connected ooo in one column', () => {
+    expect(game.result).toBe(game.getEndMessage());
+  });
 });
