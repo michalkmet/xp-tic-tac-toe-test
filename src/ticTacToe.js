@@ -78,8 +78,8 @@ class Game {
           this.winner = playerPick === 'x' ? 'player 1' : 'player 2';
           return true;
         }
-        return false;
     }
+    return false;
   }
 }
 

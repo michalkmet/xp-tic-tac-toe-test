@@ -82,10 +82,16 @@ describe('Story4', () => {
   let game;
   beforeEach(() => {
     game = new Game();
-    game.start();
   });
   it('UAT4.1: It should return "player1 wins" when there are three connected xxx in one row', () => {
-    expect(game.result).toContain('Winner is');
+    game.playingBoard = ['x', 'x', 'x', '', '', '', '', '', ''];
+    game.weHaveWinner();
+    expect(game.winner).toBe('player 1');
+  });
+  it('UAT4.2: It should return "player2 wins" when there are three connected ooo in one column', () => {
+    game.playingBoard = ['x', 'x', 'o', '', '', 'o', '', '', 'o'];
+    game.weHaveWinner();
+    expect(game.winner).toBe('player 2');
   });
 });
 
