@@ -16,15 +16,10 @@ class Game {
           this.playerMove(this.player2);
         }
       } else {
-        this.result = this.getEndMessage() + ' ' + this.getWinnerMessage(winner);
-        let winner = this.getWinner();
+        this.result = this.getEndMessage() + ' ' + this.getWinnerMessage();
       }
     }
     this.result = this.getEndMessage() + ' ' + this.getTieMessage();
-  }
-
-  getWinner() {
-    return 'player 2';
   }
 
   getStartMessage() {
@@ -33,8 +28,8 @@ class Game {
   getEndMessage() {
     return 'Game end!';
   }
-  getWinnerMessage(winner) {
-    return 'Winner is ' + winner;
+  getWinnerMessage() {
+    return 'Winner is ' + this.winner;
   }
   getTieMessage() {
     return "It's a Tie";
@@ -50,7 +45,31 @@ class Game {
   }
 
   weHaveWinner() {
-    return false;
+    ['x', 'o'].forEach((playerPick) => {
+      if (
+        // check rows
+          (
+            (this.playingBoard[0] === playerPick || this.playingBoard[1] === playerPick || this.playingBoard[2] === playerPick) ||
+            (this.playingBoard[3] === playerPick || this.playingBoard[4] === playerPick || this.playingBoard[5] === playerPick) ||
+            (this.playingBoard[6] === playerPick || this.playingBoard[7] === playerPick || this.playingBoard[8] === playerPick)
+          )
+          || // check columns
+          (
+            (this.playingBoard[0] === playerPick || this.playingBoard[3] === playerPick || this.playingBoard[7] === playerPick) ||
+            (this.playingBoard[1] === playerPick || this.playingBoard[4] === playerPick || this.playingBoard[7] === playerPick) ||
+            (this.playingBoard[2] === playerPick || this.playingBoard[5] === playerPick || this.playingBoard[8] === playerPick)
+          )
+          || // check diagonals
+          (
+            (this.playingBoard[0] === playerPick || this.playingBoard[4] === playerPick || this.playingBoard[8] === playerPick) ||
+            (this.playingBoard[2] === playerPick || this.playingBoard[4] === playerPick || this.playingBoard[6] === playerPick)
+          )
+        ) {
+          this.winner = playerPick === 'x' ? 'player 1' : 'player 2';
+          return true;
+        }
+        return false;
+    });
   }
 }
 
@@ -59,9 +78,7 @@ class Player {
     this.name = name;
   }
   makeMove(playingBoard) {
-    console.log('Player makeMove!');
     let randomSquareNumber = this.doRandomPick(playingBoard);
-    console.log('randomSquareNumber: ', randomSquareNumber);
     if (this.name === 'Player1') {
       playingBoard[randomSquareNumber] = 'x';
     } else {
@@ -71,11 +88,7 @@ class Player {
   }
 
   doRandomPick(playingBoard) {
-    console.log('doRandomPick!');
     let randomNumer = Math.floor(Math.random() * (9 - 0));
-    console.log('randomNumber: ', randomNumer);
-    console.log('playingBoard: ', playingBoard);
-    console.log('playingBoard[randomNumer] != "": ', playingBoard[randomNumer] != '');
     if (!playingBoard.includes('')) return 'Game Over';
     return playingBoard[randomNumer] != '' ? this.doRandomPick(playingBoard) : randomNumer;
   }

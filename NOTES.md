@@ -61,5 +61,8 @@ POMODORO 5:
 - ✅ UAT4.1: It should return 'player1 wins' when there are three connected xxx in one row
 - ✅ UAT5.1: It should return fill result with the message 'Game end!' when game is over
 - 🚧 UAT5.2: It should return message with the winner name when game is over and we have winner
+
+POMODORO 6:
+- 🚧 UAT5.2: It should return message with the winner name when game is over and we have winner
 - ⚠ TODO UAT5.3: It should return tie message when game is over and we don't have winner
 - ⚠ TODO UAT5.4: It should check if we have winner after every round - return true/false
