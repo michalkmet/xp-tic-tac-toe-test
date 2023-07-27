@@ -93,6 +93,11 @@ describe('Story4', () => {
     game.weHaveWinner();
     expect(game.winner).toBe('player 2');
   });
+  it("UAT4.3: It should return 'player1 wins' when there are three connected xxx diagonally from left top to right bottom", () => {
+    game.playingBoard = ['x', 'x', 'o', '', 'x', 'o', '', '', 'x'];
+    game.weHaveWinner();
+    expect(game.winner).toBe('player 1');
+  });
 });
 
 describe('Story5', () => {
