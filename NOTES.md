@@ -75,3 +75,4 @@ POMODORO 8:
 - ✅ UAT4.3: It should return 'player1 wins' when there are three connected xxx diagonally from left top to right bottom
 - ✅ UAT4.4: It should return 'player2 wins' when there are three connected ooo diagonally from right top to left bottom
 - ✅ UAT4.5: It should return 'It's a tie' when there are no three connected xxx or ooo and no empty square reaining
+- techdebt

@@ -6,7 +6,6 @@ class Game {
   }
 
   start() {
-    console.log('Game start');
     this.preparePlayingBoard();
     this.result = this.getStartMessage();
     for (let i = 0; i < 10; i++) {
@@ -17,14 +16,11 @@ class Game {
           this.playerMove(this.player2);
         }
       } else {
-        console.log('we have winner in the game start function');
         this.result = this.getEndMessage() + ' ' + this.getWinnerMessage();
-        console.log('this.result: ', this.result);
         return this.result;
       }
     }
     this.result = this.getEndMessage() + ' ' + this.getTieMessage();
-    console.log('this.result: ', this.result);
     return this.result;
   }
 
@@ -51,11 +47,7 @@ class Game {
   }
 
   weHaveWinner() {
-    console.log('weHaveWinner check');
     for (let playerPick of ['x', 'o']) {
-      console.log('playerPick: ', playerPick);
-      console.log('this.playingBoard: ', this.playingBoard);
-
       if (
         // check rows
           (
@@ -75,12 +67,10 @@ class Game {
             (this.playingBoard[2] === playerPick && this.playingBoard[4] === playerPick && this.playingBoard[6] === playerPick)
           )
         ) {
-          console.log('yes we have winner');
-          this.winner = playerPick === 'x' ? 'player 1' : 'player 2';
-          return true;
+        this.winner = playerPick === 'x' ? 'player 1' : 'player 2';
+        return true;
         }
     }
-    console.log('we are here');
     return false;
   }
 }
