@@ -2,10 +2,10 @@ class Game {
   constructor() {
     this.player1 = new Player('Player1');
     this.player2 = new Player('Player2');
-    this.start();
   }
 
   start() {
+    console.log('Game start');
     this.preparePlayingBoard();
     this.result = this.getStartMessage();
     for (let i = 0; i < 10; i++) {
@@ -16,10 +16,15 @@ class Game {
           this.playerMove(this.player2);
         }
       } else {
+        console.log('we have winner in the game start function');
         this.result = this.getEndMessage() + ' ' + this.getWinnerMessage();
+        console.log('this.result: ', this.result);
+        return this.result;
       }
     }
     this.result = this.getEndMessage() + ' ' + this.getTieMessage();
+    console.log('this.result: ', this.result);
+    return this.result;
   }
 
   getStartMessage() {
@@ -46,7 +51,7 @@ class Game {
 
   weHaveWinner() {
     console.log('weHaveWinner check');
-    ['x', 'o'].forEach((playerPick) => {
+    for (let playerPick of ['x', 'o']) {
       console.log('playerPick: ', playerPick);
       console.log('this.playingBoard: ', this.playingBoard);
 
@@ -74,7 +79,7 @@ class Game {
           return true;
         }
         return false;
-    });
+    }
   }
 }
 
