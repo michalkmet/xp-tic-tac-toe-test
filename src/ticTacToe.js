@@ -45,26 +45,31 @@ class Game {
   }
 
   weHaveWinner() {
+    console.log('weHaveWinner check');
     ['x', 'o'].forEach((playerPick) => {
+      console.log('playerPick: ', playerPick);
+      console.log('this.playingBoard: ', this.playingBoard);
+
       if (
         // check rows
           (
-            (this.playingBoard[0] === playerPick || this.playingBoard[1] === playerPick || this.playingBoard[2] === playerPick) ||
-            (this.playingBoard[3] === playerPick || this.playingBoard[4] === playerPick || this.playingBoard[5] === playerPick) ||
-            (this.playingBoard[6] === playerPick || this.playingBoard[7] === playerPick || this.playingBoard[8] === playerPick)
+            (this.playingBoard[0] === playerPick && this.playingBoard[1] === playerPick && this.playingBoard[2] === playerPick) ||
+            (this.playingBoard[3] === playerPick && this.playingBoard[4] === playerPick && this.playingBoard[5] === playerPick) ||
+            (this.playingBoard[6] === playerPick && this.playingBoard[7] === playerPick && this.playingBoard[8] === playerPick)
           )
           || // check columns
           (
-            (this.playingBoard[0] === playerPick || this.playingBoard[3] === playerPick || this.playingBoard[7] === playerPick) ||
-            (this.playingBoard[1] === playerPick || this.playingBoard[4] === playerPick || this.playingBoard[7] === playerPick) ||
-            (this.playingBoard[2] === playerPick || this.playingBoard[5] === playerPick || this.playingBoard[8] === playerPick)
+            (this.playingBoard[0] === playerPick && this.playingBoard[3] === playerPick && this.playingBoard[7] === playerPick) ||
+            (this.playingBoard[1] === playerPick && this.playingBoard[4] === playerPick && this.playingBoard[7] === playerPick) ||
+            (this.playingBoard[2] === playerPick && this.playingBoard[5] === playerPick && this.playingBoard[8] === playerPick)
           )
           || // check diagonals
           (
-            (this.playingBoard[0] === playerPick || this.playingBoard[4] === playerPick || this.playingBoard[8] === playerPick) ||
-            (this.playingBoard[2] === playerPick || this.playingBoard[4] === playerPick || this.playingBoard[6] === playerPick)
+            (this.playingBoard[0] === playerPick && this.playingBoard[4] === playerPick && this.playingBoard[8] === playerPick) ||
+            (this.playingBoard[2] === playerPick && this.playingBoard[4] === playerPick && this.playingBoard[6] === playerPick)
           )
         ) {
+          console.log('yes we have winner');
           this.winner = playerPick === 'x' ? 'player 1' : 'player 2';
           return true;
         }

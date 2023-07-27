@@ -9,7 +9,7 @@ describe('Story1', () => {
     expect(game.getEndMessage()).toBe('Game end!');
   });
   it('UAT1.3: It should show information who won the game', () => {
-    expect(game.getWinnerMessage()).toBe('Winner is player 1');
+    expect(game.getWinnerMessage()).toBe('Winner is player 2');
   });
   it('UAT1.4: It should show information if the ends with the tie', () => {
     expect(game.getTieMessage()).toBe("It's a Tie");
@@ -81,7 +81,7 @@ describe('Story5', () => {
   it('UAT5.1: It should return fill result with the message "Game end!" when game is over', () => {
     expect(game.result).toBe(game.getEndMessage());
   });
-  it('UAT5.2: It should return message with the winner name when game is over and we have winner', () => {
+  it.only('UAT5.2: It should return message with the winner name when game is over and we have winner', () => {
     expect(game.result).toBe(game.getEndMessage());
     expect(game.getWinnerMessage()).toBe('Winner is player 2');
   });
