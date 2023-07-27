@@ -3,6 +3,17 @@ class Game {
     this.player1 = new Player('Player1');
     this.player2 = new Player('Player2');
     this.preparePlayingBoard();
+    this.start();
+  }
+
+  start() {
+    for (let i = 0; i < 10; i++) {
+      if (i % 2 === 0) {
+        this.playerMove(this.player1);
+      } else {
+        this.playerMove(this.player2);
+      }
+    }
   }
 
   getStartMessage() {

@@ -48,12 +48,10 @@ describe('Story3', () => {
   it('UAT3.5: Player 1 should have possibility to randomly place "x" on the empty square', () => {
     game.playerMove(game.player1);
     expect(game.playingBoard).toContain('x');
-    expect(game.playingBoard).not.toContain('o');
   });
   it('UAT3.6: Player 2 should have possibility to randomly place "o" on the empty square', () => {
     game.playerMove(game.player2);
     expect(game.playingBoard).toContain('o');
-    expect(game.playingBoard).not.toContain('x');
   });
   it('UAT3.7: Player 1 should see the filled squares and not place "x" on the filled sqaure', () => {
     game.playerMove(game.player2);
@@ -68,5 +66,12 @@ describe('Story3', () => {
       game.playerMove(game.player2);
     }
     expect(game.playingBoard).toContain('x');
+  });
+});
+
+describe('Story4', () => {
+  let game = new Game();
+  it('UAT4.1: It should return "player1 wins" when there are three connected xxx in one row', () => {
+    expect(game.result).toBe(game.getEndMessage());
   });
 });
