@@ -51,4 +51,7 @@ POMODORO 3:
 - ✅ UAT3.5: Player 1 should have possibility to randomly place 'x' on the empty square
 - ✅ UAT3.6: Player 2 should have possibility to randomly place 'o' on the empty square
 - 🚧 UAT3.7: Player 1 should see the filled squares and not place "x" on the filled sqaure
+
+POMODORO 4:
+- ✅ UAT3.7: Player 1 should see the filled squares and not place "x" on the filled sqaure
 - ⚠ TODO UAT3.8: Player 2 should see the filled squares

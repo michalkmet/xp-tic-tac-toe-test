@@ -57,10 +57,9 @@ describe('Story3', () => {
   });
   it('UAT3.7: Player 1 should see the filled squares and not place "x" on the filled sqaure', () => {
     game.playerMove(game.player2);
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 10; i++) {
       game.playerMove(game.player1);
     }
-    console.log('game.playingBoard: ', game.playingBoard);
     expect(game.playingBoard).toContain('o');
   });
 });

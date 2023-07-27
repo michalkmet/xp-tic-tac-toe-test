@@ -35,6 +35,7 @@ class Player {
   makeMove(playingBoard) {
     console.log('Player makeMove!');
     let randomSquareNumber = this.doRandomPick(playingBoard);
+    console.log('randomSquareNumber: ', randomSquareNumber);
     if (this.name === 'Player1') {
       playingBoard[randomSquareNumber] = 'x';
     } else {
@@ -44,9 +45,12 @@ class Player {
   }
 
   doRandomPick(playingBoard) {
+    console.log('doRandomPick!');
     let randomNumer = Math.floor(Math.random() * (9 - 0));
     console.log('randomNumber: ', randomNumer);
     console.log('playingBoard: ', playingBoard);
+    console.log('playingBoard[randomNumer] != "": ', playingBoard[randomNumer] != '');
+    if (!playingBoard.includes('')) return 'Game Over';
     return playingBoard[randomNumer] != '' ? this.doRandomPick(playingBoard) : randomNumer;
   }
 }
