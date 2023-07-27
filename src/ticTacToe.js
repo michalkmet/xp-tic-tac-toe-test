@@ -2,18 +2,25 @@ class Game {
   constructor() {
     this.player1 = new Player('Player1');
     this.player2 = new Player('Player2');
-    this.preparePlayingBoard();
     this.start();
   }
 
   start() {
+    this.preparePlayingBoard();
+    this.result = this.getStartMessage();
     for (let i = 0; i < 10; i++) {
-      if (i % 2 === 0) {
-        this.playerMove(this.player1);
+      if (!this.weHaveWinner()) {
+        if (i % 2 === 0) {
+          this.playerMove(this.player1);
+        } else {
+          this.playerMove(this.player2);
+        }
       } else {
-        this.playerMove(this.player2);
+        let winner = this.getWinner();
+        return this.getWinnerMessage(winner);
       }
     }
+    this.result = this.getEndMessage();
   }
 
   getStartMessage() {
@@ -36,6 +43,10 @@ class Game {
 
   playerMove(player) {
     player.makeMove(this.playingBoard);
+  }
+
+  weHaveWinner() {
+    return false;
   }
 }
 
