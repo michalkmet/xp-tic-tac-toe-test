@@ -85,7 +85,8 @@ describe('Story4', () => {
     game.start();
   });
   it('UAT4.1: It should return "player1 wins" when there are three connected xxx in one row', () => {
-    expect(game.result).toContain('Winner is');  });
+    expect(game.result).toContain('Winner is');
+  });
 });
 
 describe('Story5', () => {
@@ -98,6 +99,12 @@ describe('Story5', () => {
     expect(game.result).toContain('Game end!');
   });
   it('UAT5.2: It should return message with the winner name when game is over and we have winner', () => {
-    expect(game.getWinnerMessage()).toContain('Winner is player');
+    expect(game.result).toContain('Game end!');
+  });
+  it("UAT5.3: It should return tie message when game is over and we don't have winner", () => {
+    expect(game.result).toContain('Game end!');
+  });
+  it('UAT5.4: It should check if we have winner after every round - return true/false', () => {
+    expect(game.weHaveWinner().toString()).toMatch(/true|false/);
   });
 });

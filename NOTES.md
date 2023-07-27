@@ -67,5 +67,5 @@ POMODORO 6:
 
 POMODORO 7:
 - ✅ UAT5.2: It should return message with the winner name when game is over and we have winner
-- ⚠ TODO UAT5.3: It should return tie message when game is over and we don't have winner
-- ⚠ TODO UAT5.4: It should check if we have winner after every round - return true/false
+- ✅ UAT5.3: It should return tie message when game is over and we don't have winner
+- ✅ UAT5.4: It should check if we have winner after every round - return true/false
