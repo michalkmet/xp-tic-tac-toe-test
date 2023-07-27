@@ -54,4 +54,4 @@ POMODORO 3:
 
 POMODORO 4:
 - ✅ UAT3.7: Player 1 should see the filled squares and not place "x" on the filled sqaure
-- ⚠ TODO UAT3.8: Player 2 should see the filled squares
+- ✅ UAT3.8: Player 2 should see the filled squares and not place "o" on the filled sqaure

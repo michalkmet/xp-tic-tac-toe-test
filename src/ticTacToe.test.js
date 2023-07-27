@@ -62,4 +62,11 @@ describe('Story3', () => {
     }
     expect(game.playingBoard).toContain('o');
   });
+  it('UAT3.8: Player 2 should see the filled squares and not place "o" on the filled sqaure', () => {
+    game.playerMove(game.player1);
+    for (let i = 0; i < 10; i++) {
+      game.playerMove(game.player2);
+    }
+    expect(game.playingBoard).toContain('x');
+  });
 });
