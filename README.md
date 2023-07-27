@@ -46,10 +46,10 @@ STORY 3: Game needs 2 players, one will place 'x' and second 'o' at the empty sq
 
 STORY 4: We need to check if someone wins the game
 - ✅ DONE UAT4.1: It should return 'player1 wins' when there are three connected xxx in one row
-- ⚠ TODO UAT4.2: It should return 'player2 wins' when there are three connected ooo in one column
-- ⚠ TODO UAT4.3: It should return 'player1 wins' when there are three connected xxx diagonally from left top to right bottom
-- ⚠ TODO UAT4.4: It should return 'player2 wins' when there are three connected ooo diagonally from right top to left bottom
-- ⚠ TODO UAT4.5: It should return 'It's a tie' when there are no three connected xxx or ooo and no empty square reaining
+- ✅ DONE UAT4.2: It should return 'player2 wins' when there are three connected ooo in one column
+- ✅ DONE UAT4.3: It should return 'player1 wins' when there are three connected xxx diagonally from left top to right bottom
+- ✅ DONE UAT4.4: It should return 'player2 wins' when there are three connected ooo diagonally from right top to left bottom
+- ✅ DONE UAT4.5: It should return 'It's a tie' when there are no three connected xxx or ooo and no empty square reaining
 
 STORY 5: Preparation for winner checks
 - ✅ DONE UAT5.1: It should return fill result with the message 'Game end!' when game is over
