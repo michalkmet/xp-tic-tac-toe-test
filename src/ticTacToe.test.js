@@ -103,6 +103,11 @@ describe('Story4', () => {
     game.weHaveWinner();
     expect(game.winner).toBe('player 2');
   });
+  it("UAT4.5: It should return 'It's a tie' when there are no three connected xxx or ooo and no empty square reaining", () => {
+    game.playingBoard = ['x', 'x', 'o', 'o', 'x', 'x', 'x', 'o', 'o'];
+    game.weHaveWinner();
+    expect(game.winner).toBe('No one');
+  });
 });
 
 describe('Story5', () => {

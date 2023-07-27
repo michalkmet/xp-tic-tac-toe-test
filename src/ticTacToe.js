@@ -2,6 +2,7 @@ class Game {
   constructor() {
     this.player1 = new Player('Player1');
     this.player2 = new Player('Player2');
+    this.winner = 'No one';
   }
 
   start() {
@@ -79,6 +80,7 @@ class Game {
           return true;
         }
     }
+    console.log('we are here');
     return false;
   }
 }
