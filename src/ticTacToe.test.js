@@ -81,4 +81,8 @@ describe('Story5', () => {
   it('UAT5.1: It should return fill result with the message "Game end!" when game is over', () => {
     expect(game.result).toBe(game.getEndMessage());
   });
+  it('UAT5.2: It should return message with the winner name when game is over and we have winner', () => {
+    expect(game.result).toBe(game.getEndMessage());
+    expect(game.getWinnerMessage()).toBe('Winner is player 2');
+  });
 });

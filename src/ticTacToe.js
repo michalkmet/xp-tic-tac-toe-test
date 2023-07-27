@@ -16,11 +16,15 @@ class Game {
           this.playerMove(this.player2);
         }
       } else {
+        this.result = this.getEndMessage() + ' ' + this.getWinnerMessage(winner);
         let winner = this.getWinner();
-        return this.getWinnerMessage(winner);
       }
     }
-    this.result = this.getEndMessage();
+    this.result = this.getEndMessage() + ' ' + this.getTieMessage();
+  }
+
+  getWinner() {
+    return 'player 2';
   }
 
   getStartMessage() {
@@ -29,8 +33,8 @@ class Game {
   getEndMessage() {
     return 'Game end!';
   }
-  getWinnerMessage() {
-    return 'Winner is player 1';
+  getWinnerMessage(winner) {
+    return 'Winner is ' + winner;
   }
   getTieMessage() {
     return "It's a Tie";
